@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Landing Page | MC Jareld Tamunday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --color-text: #1e293b;
+        --color-muted: #64748b;
+        --color-border: #e2e8f0;
+        --color-bg-alt: #f8fafc;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .project-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        color: white;
+        padding: 5rem 0;
+        margin-bottom: 4rem;
+        position: relative;
+        overflow: hidden;
+      }
+      .project-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+          radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+          radial-gradient(circle at 40% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        animation: gradientMove 15s ease-in-out infinite;
+      }
+      @keyframes gradientMove {
+        0%, 100% { 
+          transform: translateX(0) translateY(0) scale(1);
+          opacity: 1;
+        }
+        33% { 
+          transform: translateX(30px) translateY(-30px) scale(1.1);
+          opacity: 0.8;
+        }
+        66% { 
+          transform: translateX(-20px) translateY(20px) scale(0.9);
+          opacity: 0.9;
+        }
+      }
+      .project-hero .container {
+        position: relative;
+        z-index: 1;
+      }
+      .project-hero h1 {
+        color: white;
+        margin-bottom: 0.75rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+      .project-hero p {
+        opacity: 0.95;
+        font-size: 1.125rem;
+        max-width: 600px;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 4rem;
+      }
+      .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid var(--color-border);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+      }
+      .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        border-color: #667eea;
+      }
+      .feature-card h4 {
+        margin-bottom: 0.75rem;
+        color: var(--color-text);
+        font-size: 1.125rem;
+        font-weight: 600;
+      }
+      .feature-card p {
+        color: var(--color-muted);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      .code-block {
+        background: #1a1a2e;
+        color: #e2e8f0;
+        padding: 2rem;
+        border-radius: 12px;
+        overflow-x: auto;
+        font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+        font-size: 0.875rem;
+        margin-bottom: 2rem;
+        border: 1px solid #2d2d44;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      }
+      .code-block .comment {
+        color: #6a9955;
+      }
+      .code-block .tag {
+        color: #569cd6;
+      }
+      .code-block .attr {
+        color: #9cdcfe;
+      }
+      .code-block .value {
+        color: #ce9178;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      .back-link:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateX(-4px);
+      }
+      .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+      }
+      .tech-list span {
+        background: rgba(255, 255, 255, 0.25);
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        font-size: 0.875rem;
+        color: white;
+        font-weight: 500;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+      .section h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .section h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        color: var(--color-text);
+      }
+      .card ul {
+        list-style: none;
+        padding: 0;
+      }
+      .card ul li {
+        padding: 0.75rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+        color: var(--color-text);
+      }
+      .card ul li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: #667eea;
+        font-weight: bold;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(80px) scale(0.95);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      .feature-card.reveal,
+      .code-block.reveal,
+      .card.reveal {
+        opacity: 0;
+        transform: translateY(80px) scale(0.95);
+        transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .feature-card.reveal.active,
+      .code-block.reveal.active,
+      .card.reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+      .feature-card:nth-child(1) { transition-delay: 0s; }
+      .feature-card:nth-child(2) { transition-delay: 0.08s; }
+      .feature-card:nth-child(3) { transition-delay: 0.16s; }
+      .feature-card:nth-child(4) { transition-delay: 0.24s; }
+      .feature-card:nth-child(5) { transition-delay: 0.32s; }
+      .feature-card:nth-child(6) { transition-delay: 0.4s; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">MCJ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div class="container">
+          <a class="back-link" href="index.html" style="color: white;">← Back to Portfolio</a>
+          <h1>Responsive Landing Page</h1>
+          <p>A modern, mobile-first landing page with clean typography and reusable components</p>
+          <div class="tech-list">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>Flexbox</span>
+            <span>Media Queries</span>
+            <span>Mobile-First</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Project Overview</h2>
+            <p>A fully responsive landing page designed to work seamlessly across all device sizes, from mobile phones to desktop screens.</p>
+          </div>
+
+          <h3>Key Features</h3>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h4>Mobile-First Design</h4>
+              <p>Built with a mobile-first approach, scaling up for larger screens using CSS media queries.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Clean Typography</h4>
+              <p>Uses Inter font family with proper line heights and spacing for readability.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Flexible Layout</h4>
+              <p>Uses CSS Flexbox for adaptive layouts that adjust content based on screen size.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Reusable Components</h4>
+              <p>Card-based design system with consistent styling for easy maintenance.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Fast Loading</h4>
+              <p>No external frameworks—pure HTML/CSS for optimal performance.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Accessible</h4>
+              <p>Semantic HTML tags and proper ARIA labels for screen readers.</p>
+            </div>
+          </div>
+
+          <h3>Code Sample</h3>
+          <p style="color: var(--color-muted); margin-bottom: 1rem;">Example of the responsive grid layout:</p>
+          <div class="code-block">
+<span class="comment">/* Mobile-first grid layout */</span>
+.<span class="tag">grid</span> {
+  <span class="attr">display</span>: <span class="value">grid</span>;
+  <span class="attr">grid-template-columns</span>: <span class="value">1fr</span>;
+  <span class="attr">gap</span>: <span class="value">1.5rem</span>;
+}
+
+<span class="comment">/* Tablet and up */</span>
+@media (<span class="attr">min-width</span>: <span class="value">768px</span>) {
+  .<span class="tag">grid</span> {
+    <span class="attr">grid-template-columns</span>: <span class="value">repeat(2, 1fr)</span>;
+  }
+}
+
+<span class="comment">/* Desktop */</span>
+@media (<span class="attr">min-width</span>: <span class="value">1024px</span>) {
+  .<span class="tag">grid</span> {
+    <span class="attr">grid-template-columns</span>: <span class="value">repeat(3, 1fr)</span>;
+  }
+}
+          </div>
+
+          <h3>What I Learned</h3>
+          <div class="card">
+            <ul>
+              <li>How to use CSS media queries effectively for responsive design</li>
+              <li>Importance of semantic HTML for accessibility</li>
+              <li>Building flexible layouts with Flexbox and CSS Grid</li>
+              <li>Performance optimization by avoiding unnecessary frameworks</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">© <span id="year"></span> MC Jareld Tamunday</div>
+      </div>
+    </footer>
+Framer-style ss
+    <script src="script.js"></script>
+    <script>
+      // Scroll reveal animation
+      const revealElements = document.querySelectorAll('.feature-card, .code-block, .card');
+      
+      const revealOnScroll = () => {
+        reconst revealPoint = windowHeight * 0.85;vealElements.forEach(element => {
+          
+          const elementTop revealPo eeingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+        });
+      };
+      
+      // Parallax effect for hero
+      const hero = document.querySelector('.project-hero');
+      window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        if (hero) {
+          hero.style.transform = `translateY(${scrolled * 0.3 px `i
+        }f (elementTop < windowHeight - 100) {
+       )     element.classList.add('reveal', 'active');
+          }
+        });, { passive: true }
+      };
+      
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+    </script>
+  </body>
+</html>

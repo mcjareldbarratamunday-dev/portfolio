@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Calendar Sample | MC Jareld Tamunday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --color-text: #1e293b;
+        --color-muted: #64748b;
+        --color-border: #e2e8f0;
+        --color-bg-alt: #f8fafc;
+        --color-primary: #667eea;
+      }
+      .calendar-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      }
+      .calendar-table th,
+      .calendar-table td {
+        border: 1px solid var(--color-border);
+        padding: 1rem 1.25rem;
+        text-align: left;
+      }
+      .calendar-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+      }
+      .calendar-table td {
+        color: var(--color-text);
+        background: linear-gradient(135deg, #f8f9ff 0%, #fef3ff 100%);
+      }
+      .calendar-table tr:nth-child(even) td {
+        background: linear-gradient(135deg, #fff0ff 0%, #f8f9ff 100%);
+      }
+      .calendar-table tr:hover td {
+        background: rgba(102, 126, 234, 0.15);
+      }
+      .status-pending {
+        color: #f59e0b;
+        font-weight: 600;
+        padding: 0.25rem 0.75rem;
+        background: rgba(245, 158, 11, 0.1);
+        border-radius: 20px;
+        display: inline-block;
+      }
+      .status-done {
+        color: #10b981;
+        font-weight: 600;
+        padding: 0.25rem 0.75rem;
+        background: rgba(16, 185, 129, 0.1);
+        border-radius: 20px;
+        display: inline-block;
+      }
+      .status-scheduled {
+        color: #3b82f6;
+        font-weight: 600;
+        padding: 0.25rem 0.75rem;
+        background: rgba(59, 130, 246, 0.1);
+        border-radius: 20px;
+        display: inline-block;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        background: rgba(102, 126, 234, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      .back-link:hover {
+        background: rgba(102, 126, 234, 0.2);
+        transform: translateX(-4px);
+      }
+      .calendar-note {
+        background: linear-gradient(135deg, #f8f9ff 0%, #fef3ff 100%);
+        padding: 1.5rem;
+        border-radius: 12px;
+        font-size: 0.9rem;
+        color: var(--color-text);
+        border: 1px solid rgba(102, 126, 234, 0.2);
+      }
+      .section h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .calendar-table.reveal,
+      .calendar-note.reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+      .calendar-table.reveal.active,
+      .calendar-note.reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="va-portfolio.html">MCJ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <a class="back-link" href="va-portfolio.html">← Back to VA Portfolio</a>
+          
+          <div class="section-head">
+            <h1>Content Calendar Sample</h1>
+            <p>Example of a weekly content calendar for social media planning and scheduling.</p>
+          </div>
+
+          <div class="card">
+            <h3>Weekly Content Calendar</h3>
+            <p style="color: var(--color-muted);">Platform: Instagram & Facebook • Week of January 15-21, 2024</p>
+            
+            <table class="calendar-table">
+              <thead>
+                <tr>
+                  <th>Day</th>
+                  <th>Topic</th>
+                  <th>Caption / Content</th>
+                  <th>Platform</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monday</td>
+                  <td>Monday Motivation</td>
+                  <td>Inspirational quote about productivity + engagement question</td>
+                  <td>IG Story, FB Post</td>
+                  <td class="status-done">Done</td>
+                </tr>
+                <tr>
+                  <td>Tuesday</td>
+                  <td>Service Spotlight</td>
+                  <td>Feature one service with benefits and CTA to book</td>
+                  <td>IG Post, FB Post</td>
+                  <td class="status-done">Done</td>
+                </tr>
+                <tr>
+                  <td>Wednesday</td>
+                  <td>Behind the Scenes</td>
+                  <td>Photo of workspace/process with casual caption</td>
+                  <td>IG Reel, FB Post</td>
+                  <td class="status-scheduled">Scheduled</td>
+                </tr>
+                <tr>
+                  <td>Thursday</td>
+                  <td>Tip Thursday</td>
+                  <td>Quick tip related to industry/service</td>
+                  <td>IG Story, FB Post</td>
+                  <td class="status-pending">Pending</td>
+                </tr>
+                <tr>
+                  <td>Friday</td>
+                  <td>Client Testimonial</td>
+                  <td>Share client feedback with image/graphic</td>
+                  <td>IG Post, FB Post</td>
+                  <td class="status-pending">Pending</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>Weekend Vibes</td>
+                  <td>Casual post about weekend plans + engagement</td>
+                  <td>IG Story</td>
+                  <td class="status-pending">Pending</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>Weekly Recap</td>
+                  <td>Summary of week's highlights + preview next week</td>
+                  <td>FB Post</td>
+                  <td class="status-pending">Pending</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="calendar-note">
+              <strong>Note:</strong> This calendar can be expanded to monthly view. Status options: Done, Scheduled, Pending, Draft. Each entry can include hashtags, image descriptions, and posting times.
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">© <span id="year"></span> MC Jareld Tamunday</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const revealElements = document.querySelectorAll('.calendar-table, .calendar-note');
+      
+      const revealOnScroll = () => {
+        revealElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight - 100) {
+            element.classList.add('reveal', 'active');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+    </script>
+  </body>
+</html>

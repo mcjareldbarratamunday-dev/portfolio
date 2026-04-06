@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Support Work Samples | MC Jareld Tamunday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --color-text: #1e293b;
+        --color-muted: #64748b;
+        --color-border: #e2e8f0;
+        --color-bg-alt: #f8fafc;
+        --color-primary: #667eea;
+      }
+      .sample-section {
+        margin-bottom: 4rem;
+      }
+      .sample-section h3 {
+        margin-bottom: 1.5rem;
+        color: var(--color-text);
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      .sample-box {
+        background: linear-gradient(135deg, #f8f9ff 0%, #fef3ff 100%);
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+        border-radius: 16px;
+        border: 1px solid rgba(102, 126, 234, 0.2);
+        box-shadow: 0 4px 6px -1px rgba(102, 126, 234, 0.1);
+        transition: all 0.3s ease;
+      }
+      .sample-box:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        border-color: #667eea;
+      }
+      .sample-box .label {
+        font-size: 0.875rem;
+        color: #667eea;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+      .sample-box .content {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--color-text);
+        white-space: pre-line;
+      }
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        background: rgba(102, 126, 234, 0.1);
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+      .back-link:hover {
+        background: rgba(102, 126, 234, 0.2);
+        transform: translateX(-4px);
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 0.75rem;
+        font-size: 0.9rem;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      }
+      .data-table th,
+      .data-table td {
+        border: 1px solid var(--color-border);
+        padding: 0.75rem 1rem;
+        text-align: left;
+      }
+      .data-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.85rem;
+      }
+      .data-table td {
+        background: linear-gradient(135deg, #f8f9ff 0%, #fef3ff 100%);
+        color: var(--color-text);
+      }
+      .data-table tr:nth-child(even) td {
+        background: linear-gradient(135deg, #fff0ff 0%, #f8f9ff 100%);
+      }
+      .data-table tr:hover td {
+        background: rgba(102, 126, 234, 0.15);
+      }
+      .section h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .sample-box.reveal {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.8s ease;
+      }
+      .sample-box.reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .sample-box:nth-child(1) { transition-delay: 0.1s; }
+      .sample-box:nth-child(2) { transition-delay: 0.2s; }
+      .sample-box:nth-child(3) { transition-delay: 0.3s; }
+      .sample-box:nth-child(4) { transition-delay: 0.4s; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="va-portfolio.html">MCJ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <a class="back-link" href="va-portfolio.html">← Back to VA Portfolio</a>
+          
+          <div class="section-head">
+            <h1>Admin Support Work Samples</h1>
+            <p>Examples of formatted documents, research summaries, and spreadsheet organization.</p>
+          </div>
+
+          <div class="sample-section">
+            <h3>1. Document Formatting (Google Docs)</h3>
+            <div class="sample-box">
+              <div class="label">Sample: Meeting Minutes</div>
+              <div class="content">
+<strong>Meeting Minutes</strong>
+Date: January 15, 2024
+Time: 10:00 AM - 11:00 AM
+Attendees: John (Manager), Sarah (Marketing), Mike (IT), MC (Note-taker)
+
+<strong>Agenda Items Discussed:</strong>
+
+1. Q1 Marketing Campaign Review
+   - Sarah presented campaign performance metrics
+   - Engagement increased by 25% compared to Q4
+   - Action item: Prepare detailed report by next meeting
+
+2. IT System Updates
+   - Mike reported software upgrade scheduled for Jan 22
+   - Expected downtime: 2 hours (9 AM - 11 AM)
+   - Action item: Notify all staff by Jan 19
+
+3. New Client Onboarding Process
+   - Discussed streamlining documentation
+   - John to draft new template by Jan 20
+   - MC to review and format final version
+
+<strong>Next Meeting:</strong>
+January 22, 2024 at 10:00 AM
+              </div>
+            </div>
+            <div class="sample-box">
+              <div class="label">Sample: Email Draft</div>
+              <div class="content">
+Subject: Meeting Rescheduled: Project Review
+
+Hi [Client Name],
+
+I hope this email finds you well.
+
+I'm writing to reschedule our project review meeting originally set for January 18 at 2:00 PM. Due to a scheduling conflict, I'd like to propose moving it to January 19 at the same time (2:00 PM).
+
+Please let me know if this new time works for you, or if you'd prefer an alternative slot.
+
+Thank you for your understanding. I look forward to our discussion.
+
+Best regards,
+MC Jareld Tamunday
+              </div>
+            </div>
+          </div>
+
+          <div class="sample-section">
+            <h3>2. Internet Research Summary</h3>
+            <div class="sample-box">
+              <div class="label">Research Topic: Top 5 Virtual Assistant Tools for 2024</div>
+              <div class="content">
+<strong>Research Summary</strong>
+Date: January 15, 2024
+Source: Multiple industry blogs and reviews
+
+<strong>Key Findings:</strong>
+
+1. Trello - Project Management
+   - Free plan available
+   - Easy to use with drag-and-drop interface
+   - Integrates with Google Workspace
+   - Best for: Task tracking and team collaboration
+
+2. Calendly - Scheduling
+   - Free tier for individual users
+   - Automated booking with timezone detection
+   - Reduces back-and-forth emails
+   - Best for: Meeting scheduling
+
+3. Slack - Communication
+   - Free for small teams
+   - Organized channels by topic
+   - File sharing and search capabilities
+   - Best for: Team communication
+
+4. Google Workspace - Productivity Suite
+   - Docs, Sheets, Slides, Gmail
+   - Real-time collaboration
+   - Cloud storage (15GB free)
+   - Best for: Document creation and storage
+
+5. Canva - Design
+   - Free version with templates
+   - Social media graphics and presentations
+   - Brand kit feature for consistency
+   - Best for: Basic graphic design needs
+
+<strong>Recommendation:</strong>
+For a new VA starting out, Google Workspace + Trello + Calendly provides a solid foundation for productivity.
+              </div>
+            </div>
+          </div>
+
+          <div class="sample-section">
+            <h3>3. Spreadsheet Organization (Google Sheets)</h3>
+            <div class="sample-box">
+              <div class="label">Sample: Client Contact List</div>
+              <div class="content">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Client Name</th>
+                      <th>Email</th>
+                      <th>Company</th>
+                      <th>Status</th>
+                      <th>Last Contact</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Jane Smith</td>
+                      <td>jane@company.com</td>
+                      <td>ABC Corp</td>
+                      <td>Active</td>
+                      <td>Jan 15, 2024</td>
+                    </tr>
+                    <tr>
+                      <td>John Doe</td>
+                      <td>john@startup.io</td>
+                      <td>Startup Inc</td>
+                      <td>Active</td>
+                      <td>Jan 12, 2024</td>
+                    </tr>
+                    <tr>
+                      <td>Sarah Lee</td>
+                      <td>sarah@agency.net</td>
+                      <td>Creative Agency</td>
+                      <td>Pending</td>
+                      <td>Jan 10, 2024</td>
+                    </tr>
+                    <tr>
+                      <td>Mike Chen</td>
+                      <td>mike@tech.co</td>
+                      <td>Tech Solutions</td>
+                      <td>Inactive</td>
+                      <td>Dec 28, 2023</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="sample-box">
+              <div class="label">Sample: Task Tracker</div>
+              <div class="content">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Task</th>
+                      <th>Priority</th>
+                      <th>Due Date</th>
+                      <th>Status</th>
+                      <th>Assigned To</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Prepare Q1 Report</td>
+                      <td>High</td>
+                      <td>Jan 20, 2024</td>
+                      <td>In Progress</td>
+                      <td>MC</td>
+                    </tr>
+                    <tr>
+                      <td>Email follow-ups</td>
+                      <td>Medium</td>
+                      <td>Jan 18, 2024</td>
+                      <td>Pending</td>
+                      <td>MC</td>
+                    </tr>
+                    <tr>
+                      <td>Update client list</td>
+                      <td>Low</td>
+                      <td>Jan 25, 2024</td>
+                      <td>Not Started</td>
+                      <td>MC</td>
+                    </tr>
+                    <tr>
+                      <td>Schedule meetings</td>
+                      <td>High</td>
+                      <td>Jan 17, 2024</td>
+                      <td>Done</td>
+                      <td>MC</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">© <span id="year"></span> MC Jareld Tamunday</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const revealElements = document.querySelectorAll('.sample-box');
+      
+      const revealOnScroll = () => {
+        revealElements.forEach(element => {
+          const elementTop = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+          
+          if (elementTop < windowHeight - 100) {
+            element.classList.add('reveal', 'active');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+    </script>
+  </body>
+</html>

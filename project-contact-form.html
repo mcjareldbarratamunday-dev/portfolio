@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form with Validation | MC Jareld Tamunday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .project-hero {
+        background: linear-gradient(135deg, var(--color-primary) 0%, #8b5cf6 100%);
+        color: white;
+        padding: 3rem 0;
+        margin-bottom: 3rem;
+      }
+      .project-hero h1 {
+        color: white;
+        margin-bottom: 0.5rem;
+      }
+      .project-hero p {
+        opacity: 0.9;
+      }
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+      .feature-card {
+        background: var(--color-bg-alt);
+        padding: 1.5rem;
+        border-radius: 8px;
+        border-left: 3px solid var(--color-primary);
+      }
+      .feature-card h4 {
+        margin-bottom: 0.5rem;
+        color: var(--color-text);
+      }
+      .feature-card p {
+        color: var(--color-muted);
+        font-size: 0.9rem;
+      }
+      .code-block {
+        background: #1e1e1e;
+        color: #d4d4d4;
+        padding: 1.5rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        font-family: 'Consolas', 'Monaco', monospace;
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+      }
+      .code-block .comment {
+        color: #6a9955;
+      }
+      .code-block .keyword {
+        color: #569cd6;
+      }
+      .code-block .function {
+        color: #dcdcaa;
+      }
+      .code-block .string {
+        color: #ce9178;
+      }
+      .back-link {
+        display: inline-block;
+        margin-bottom: 2rem;
+        color: var(--color-primary);
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+      .tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+      }
+      .tech-list span {
+        background: var(--color-bg-alt);
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: var(--color-text);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html">MCJ</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <div class="container">
+          <a class="back-link" href="index.html" style="color: white;">← Back to Portfolio</a>
+          <h1>Contact Form with Validation</h1>
+          <p>An interactive contact form with real-time validation, error handling, and user feedback</p>
+          <div class="tech-list">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Form Validation</span>
+            <span>Error Handling</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Project Overview</h2>
+            <p>A contact form with client-side validation to ensure data quality before submission, providing clear feedback to users.</p>
+          </div>
+
+          <h3>Key Features</h3>
+          <div class="feature-grid">
+            <div class="feature-card">
+              <h4>Real-time Validation</h4>
+              <p>Validates inputs as user types with immediate feedback for errors.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Email Validation</h4>
+              <p>Regex-based email format checking to ensure valid email addresses.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Required Fields</h4>
+              <p>Ensures all required fields are filled before form submission.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Error Messages</h4>
+              <p>Clear, user-friendly error messages displayed below each field.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Success Feedback</h4>
+              <p>Visual confirmation when form is successfully submitted.</p>
+            </div>
+            <div class="feature-card">
+              <h4>Accessible</h4>
+              <p>Proper labels, ARIA attributes, and keyboard navigation support.</p>
+            </div>
+          </div>
+
+          <h3>Code Sample</h3>
+          <p style="color: var(--color-muted); margin-bottom: 1rem;">Example of the form validation script:</p>
+          <div class="code-block">
+<span class="comment">// Email validation function</span>
+<span class="keyword">function</span> <span class="function">validateEmail</span>(email) {
+  <span class="keyword">const</span> regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  <span class="keyword">return</span> regex.<span class="function">test</span>(email);
+}
+
+<span class="comment">// Form submission handler</span>
+form.<span class="function">addEventListener</span>(<span class="string">'submit'</span>, (e) => {
+  e.<span class="function">preventDefault</span>();
+  <span class="keyword">let</span> isValid = <span class="keyword">true</span>;
+  
+  <span class="comment">// Validate name</span>
+  <span class="keyword">if</span> (nameInput.value.trim() === <span class="string">''</span>) {
+    <span class="function">showError</span>(nameInput, <span class="string">'Name is required'</span>);
+    isValid = <span class="keyword">false</span>;
+  }
+  
+  <span class="comment">// Validate email</span>
+  <span class="keyword">if</span> (!<span class="function">validateEmail</span>(emailInput.value)) {
+    <span class="function">showError</span>(emailInput, <span class="string">'Please enter a valid email'</span>);
+    isValid = <span class="keyword">false</span>;
+  }
+  
+  <span class="keyword">if</span> (isValid) {
+    <span class="function">showSuccess</span>(<span class="string">'Form submitted successfully!'</span>);
+  }
+});
+          </div>
+
+          <h3>What I Learned</h3>
+          <div class="card">
+            <ul>
+              <li>JavaScript form handling and event listeners</li>
+              <li>Regex patterns for data validation</li>
+              <li>DOM manipulation for dynamic error messages</li>
+              <li>User experience design for form interactions</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">© <span id="year"></span> MC Jareld Tamunday</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
