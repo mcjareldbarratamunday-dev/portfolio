@@ -356,61 +356,229 @@
         <div class="container">
           <div class="section-head">
             <h2>Projects</h2>
-            <p>Replace these placeholders with your real projects anytime.</p>
+            <p>Real projects I built as a student developer.</p>
           </div>
 
-          <div class="projects">
-            <article class="project card">
-              <div class="project-top">
-                <h3 class="project-title">Responsive Landing Page</h3>
-                <div class="project-tags">
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                </div>
-              </div>
-              <p class="project-desc">
-                A modern landing page with mobile-first layout, clean typography, and reusable components.
-              </p>
-              <div class="project-actions">
-                <a class="btn btn-small btn-ghost" href="project-landing-page.html">View Details</a>
-              </div>
-            </article>
+          <!-- Swipeable Project Slider -->
+          <div class="proj-slider-wrap">
+            <div class="proj-slider" id="projSlider">
 
-            <article class="project card">
-              <div class="project-top">
-                <h3 class="project-title">Simple Portfolio</h3>
-                <div class="project-tags">
-                  <span class="tag">HTML</span>
-                  <span class="tag">CSS</span>
-                  <span class="tag">JS</span>
+              <!-- Card 1 -->
+              <article class="proj-slide">
+                <div class="proj-img-wrap">
+                  <img src="assets/proj-landing.jpg" alt="Responsive Landing Page screenshot" class="proj-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                  <div class="proj-img-placeholder"><span>&#128247; Add screenshot<br><small>assets/proj-landing.jpg</small></span></div>
+                  <div class="proj-img-overlay">
+                    <a class="btn btn-small btn-primary" href="project-landing-page.html" target="_blank">View Details</a>
+                  </div>
                 </div>
-              </div>
-              <p class="project-desc">
-                A fast portfolio with smooth navigation, responsive sections, and clean UI.
-              </p>
-              <div class="project-actions">
-                <a class="btn btn-small btn-primary" href="project-portfolio.html" target="_blank">View Details</a>
-              </div>
-            </article>
+                <div class="proj-info">
+                  <div class="proj-tags-row">
+                    <span class="tag">HTML</span><span class="tag">CSS</span>
+                  </div>
+                  <h3 class="proj-name">Responsive Landing Page</h3>
+                  <p class="proj-desc">A modern landing page with mobile-first layout, clean typography, and reusable components.</p>
+                </div>
+              </article>
 
-            <article class="project card">
-              <div class="project-top">
-                <h3 class="project-title">PHP CRUD Mini System</h3>
-                <div class="project-tags">
-                  <span class="tag">PHP</span>
-                  <span class="tag">CRUD</span>
+              <!-- Card 2 -->
+              <article class="proj-slide">
+                <div class="proj-img-wrap">
+                  <img src="assets/proj-portfolio.jpg" alt="Simple Portfolio screenshot" class="proj-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                  <div class="proj-img-placeholder"><span>&#128247; Add screenshot<br><small>assets/proj-portfolio.jpg</small></span></div>
+                  <div class="proj-img-overlay">
+                    <a class="btn btn-small btn-primary" href="project-portfolio.html" target="_blank">View Details</a>
+                  </div>
                 </div>
-              </div>
-              <p class="project-desc">
-                A simple system with forms and records (create/read/update/delete) to practice backend basics.
-              </p>
-              <div class="project-actions">
-                <a class="btn btn-small btn-primary" href="project-php-crud.html" target="_blank">View Details</a>
-              </div>
-            </article>
+                <div class="proj-info">
+                  <div class="proj-tags-row">
+                    <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+                  </div>
+                  <h3 class="proj-name">Simple Portfolio</h3>
+                  <p class="proj-desc">A fast portfolio with smooth navigation, responsive sections, and clean UI.</p>
+                </div>
+              </article>
+
+              <!-- Card 3 -->
+              <article class="proj-slide">
+                <div class="proj-img-wrap">
+                  <img src="assets/proj-crud.jpg" alt="PHP CRUD Mini System screenshot" class="proj-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                  <div class="proj-img-placeholder"><span>&#128247; Add screenshot<br><small>assets/proj-crud.jpg</small></span></div>
+                  <div class="proj-img-overlay">
+                    <a class="btn btn-small btn-primary" href="project-php-crud.html" target="_blank">View Details</a>
+                  </div>
+                </div>
+                <div class="proj-info">
+                  <div class="proj-tags-row">
+                    <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">CRUD</span>
+                  </div>
+                  <h3 class="proj-name">PHP CRUD Mini System</h3>
+                  <p class="proj-desc">A simple system with forms and records (create/read/update/delete) to practice backend basics.</p>
+                </div>
+              </article>
+
+              <!-- Card 4 -->
+              <article class="proj-slide">
+                <div class="proj-img-wrap">
+                  <img src="assets/proj-hanapbuhay.jpg" alt="Hanapbuhay Job Portal screenshot" class="proj-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                  <div class="proj-img-placeholder"><span>&#128247; Add screenshot<br><small>assets/proj-hanapbuhay.jpg</small></span></div>
+                  <div class="proj-img-overlay">
+                    <a class="btn btn-small btn-primary" href="https://hanapbuhay.surf" target="_blank">View Live</a>
+                  </div>
+                </div>
+                <div class="proj-info">
+                  <div class="proj-tags-row">
+                    <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Tailwind</span><span class="tag">Alpine.js</span>
+                  </div>
+                  <h3 class="proj-name">Hanapbuhay — Job Portal</h3>
+                  <p class="proj-desc">A full-stack job matching platform for Filipino graduates. UI/UX improvements, role-based dashboards, and security implementation. Live at hanapbuhay.surf</p>
+                </div>
+              </article>
+
+            </div><!-- end slider -->
+
+            <!-- Controls -->
+            <div class="proj-controls">
+              <button class="proj-btn" id="projPrev" aria-label="Previous">&#8592;</button>
+              <div class="proj-dots" id="projDots"></div>
+              <button class="proj-btn" id="projNext" aria-label="Next">&#8594;</button>
+            </div>
           </div>
+
         </div>
       </section>
+
+      <style>
+        /* === PROJECT CAROUSEL === */
+        .proj-slider-wrap {
+          position: relative;
+          overflow: hidden;
+          cursor: grab;
+          user-select: none;
+        }
+        .proj-slider-wrap.dragging { cursor: grabbing; }
+
+        .proj-slider {
+          display: flex;
+          gap: 20px;
+          transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+          will-change: transform;
+        }
+        .proj-slider.no-transition { transition: none; }
+
+        /* Show ~1.2 cards on mobile, ~2.2 on tablet, ~3 on desktop */
+        .proj-slide {
+          min-width: 78vw;
+          max-width: 340px;
+          flex-shrink: 0;
+          background: var(--color-card, #1a1d2e);
+          border-radius: 18px;
+          overflow: hidden;
+          border: 1px solid var(--color-border, rgba(255,255,255,0.08));
+          transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+        .proj-slide:hover { box-shadow: 0 8px 40px rgba(102,126,234,0.25); transform: translateY(-4px); }
+
+        @media (min-width: 640px)  { .proj-slide { min-width: 300px; } }
+        @media (min-width: 1024px) { .proj-slide { min-width: 280px; } }
+
+        .proj-img-wrap {
+          position: relative;
+          width: 100%;
+          height: 200px;
+          overflow: hidden;
+          background: #0d0f1a;
+        }
+        .proj-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+          pointer-events: none;
+          transition: transform 0.5s cubic-bezier(0.16,1,0.3,1), filter 0.4s ease;
+          filter: brightness(0.9);
+        }
+        .proj-slide:hover .proj-img { transform: scale(1.07); filter: brightness(0.6); }
+
+        .proj-img-placeholder {
+          display: none;
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, #1e2140 0%, #0d0f1a 100%);
+          color: rgba(255,255,255,0.25);
+          font-size: 12px;
+          text-align: center;
+          line-height: 1.8;
+        }
+        .proj-img-overlay {
+          position: absolute;
+          inset: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(5,5,15,0.5);
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          backdrop-filter: blur(3px);
+        }
+        .proj-slide:hover .proj-img-overlay { opacity: 1; }
+
+        .proj-info { padding: 18px 20px 20px; }
+        .proj-tags-row { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+        .proj-name { font-size: 16px; font-weight: 700; margin: 0 0 6px; color: #f1f5f9; }
+        .proj-desc { font-size: 12.5px; color: #94a3b8; line-height: 1.65; margin: 0; }
+
+        /* Controls */
+        .proj-controls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 14px;
+          margin-top: 22px;
+        }
+        .proj-btn {
+          background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.13);
+          color: #f1f5f9;
+          width: 40px; height: 40px;
+          border-radius: 50%;
+          font-size: 17px;
+          cursor: pointer;
+          display: flex; align-items: center; justify-content: center;
+          transition: background 0.2s, transform 0.2s;
+          flex-shrink: 0;
+        }
+        .proj-btn:hover { background: rgba(102,126,234,0.3); transform: scale(1.12); }
+        .proj-btn:disabled { opacity: 0.3; cursor: default; transform: none; }
+
+        .proj-dots { display: flex; gap: 7px; }
+        .proj-dot {
+          width: 7px; height: 7px; border-radius: 50%;
+          background: rgba(255,255,255,0.18);
+          border: none; cursor: pointer;
+          transition: background 0.3s, transform 0.3s, width 0.3s;
+          padding: 0;
+        }
+        .proj-dot.active {
+          background: #667eea;
+          width: 22px;
+          border-radius: 4px;
+          transform: none;
+        }
+
+        /* Fade edges */
+        .proj-slider-wrap::after {
+          content: '';
+          position: absolute;
+          top: 0; right: 0; bottom: 0;
+          width: 60px;
+          background: linear-gradient(to right, transparent, var(--color-bg, #0d0f1a));
+          pointer-events: none;
+          z-index: 2;
+        }
+      </style>
 
       <section class="section" id="contact">
         <div class="container">
@@ -461,6 +629,86 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      // === PROJECT CAROUSEL ===
+      (function() {
+        const wrap = document.querySelector('.proj-slider-wrap');
+        const slider = document.getElementById('projSlider');
+        const dotsWrap = document.getElementById('projDots');
+        const prevBtn = document.getElementById('projPrev');
+        const nextBtn = document.getElementById('projNext');
+        if (!slider) return;
+
+        const slides = slider.querySelectorAll('.proj-slide');
+        let current = 0;
+        const total = slides.length;
+
+        function cardWidth() {
+          return slides[0].getBoundingClientRect().width + 20; // width + gap
+        }
+
+        function goTo(idx) {
+          current = Math.max(0, Math.min(idx, total - 1));
+          slider.style.transform = `translateX(-${current * cardWidth()}px)`;
+          dotsWrap.querySelectorAll('.proj-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+          prevBtn.disabled = current === 0;
+          nextBtn.disabled = current === total - 1;
+        }
+
+        // Build dots
+        slides.forEach((_, i) => {
+          const d = document.createElement('button');
+          d.className = 'proj-dot' + (i === 0 ? ' active' : '');
+          d.setAttribute('aria-label', 'Slide ' + (i + 1));
+          d.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(d);
+        });
+
+        prevBtn.addEventListener('click', () => goTo(current - 1));
+        nextBtn.addEventListener('click', () => goTo(current + 1));
+        prevBtn.disabled = true;
+
+        // Touch swipe
+        let tx = 0, isDragging = false, startX = 0, currentX = 0;
+
+        function dragStart(x) {
+          isDragging = true;
+          startX = x;
+          currentX = x;
+          slider.classList.add('no-transition');
+          wrap.classList.add('dragging');
+        }
+        function dragMove(x) {
+          if (!isDragging) return;
+          const diff = x - startX;
+          currentX = x;
+          slider.style.transform = `translateX(${-current * cardWidth() + diff}px)`;
+        }
+        function dragEnd() {
+          if (!isDragging) return;
+          isDragging = false;
+          wrap.classList.remove('dragging');
+          slider.classList.remove('no-transition');
+          const diff = currentX - startX;
+          if (diff < -60) goTo(current + 1);
+          else if (diff > 60) goTo(current - 1);
+          else goTo(current);
+        }
+
+        // Mouse drag
+        wrap.addEventListener('mousedown', e => dragStart(e.clientX));
+        window.addEventListener('mousemove', e => dragMove(e.clientX));
+        window.addEventListener('mouseup', dragEnd);
+
+        // Touch
+        wrap.addEventListener('touchstart', e => dragStart(e.touches[0].clientX), {passive:true});
+        wrap.addEventListener('touchmove', e => dragMove(e.touches[0].clientX), {passive:true});
+        wrap.addEventListener('touchend', dragEnd, {passive:true});
+
+        window.addEventListener('resize', () => goTo(current));
+        goTo(0);
+      })();
+    </script>
     <script>
       // Loading animation
       window.addEventListener('load', () => {
